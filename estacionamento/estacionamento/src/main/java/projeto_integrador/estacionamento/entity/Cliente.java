@@ -1,7 +1,11 @@
 package projeto_integrador.estacionamento.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -11,25 +15,22 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class Cliente {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_cliente")
-    private Long idCliente;
+    private Long id;
 
     @Column(nullable = false)
     private String nome;
 
-    //armazenar CPF (11) ou CNPJ (14)
-    @Column(nullable = false, unique = true, length = 18)
-    private String cpfCnpj;
+    @Column(nullable = false, unique = true)
+    private String cpf;
 
-    @Column(nullable = false, unique = true, length = 15)
+    @Column(nullable = false, unique = true)
     private String telefone;
 
     @Column(nullable = false, unique = true)
     private String email;
 
-    @Column(name = "data_cadastro")
     private LocalDateTime dataCadastro;
+
 }
