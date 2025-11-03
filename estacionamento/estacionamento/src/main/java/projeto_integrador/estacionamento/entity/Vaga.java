@@ -5,18 +5,16 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Veiculo {
+public class Vaga {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String modelo;
-    private int ano;
-    private String placa;
-    private String montadora;
+    private String numero;
+    private String categoria;
+    private String status;
 
     @ManyToOne
-    @JoinColumn(name = "cliente_id")
-    private Cliente cliente;
-
+    @JoinColumn(name = "estacionamento_id")
+    private Estacionamento estacionamento;
 }
