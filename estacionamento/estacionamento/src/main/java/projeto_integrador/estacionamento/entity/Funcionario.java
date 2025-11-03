@@ -5,7 +5,7 @@ import lombok.*;
 
 @Entity
 @Table(name = "funcionario")
-@Data
+@Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -28,7 +28,7 @@ public class Funcionario {
     @Column(nullable = false)
     private Boolean ativo = true;
 
-    //Relacionamento 1:1 com USUARIO (login/senha)
-    @OneToOne(mappedBy = "funcionario", cascade = CascadeType.ALL)
+    // Lado inverso; o dono é Usuario (tem a FK)
+    @OneToOne(mappedBy = "funcionario", fetch = FetchType.LAZY)
     private Usuario usuario;
 }
