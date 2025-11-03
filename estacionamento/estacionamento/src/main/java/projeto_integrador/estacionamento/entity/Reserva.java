@@ -1,11 +1,8 @@
 package projeto_integrador.estacionamento.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
+import lombok.*;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -18,22 +15,30 @@ public class Reserva {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "id_reserva")
+    private Long idReserva;
 
+    // 🔗 CLIENTE que fez a reserva
     @ManyToOne(optional = false)
     @JoinColumn(name = "cliente_id", nullable = false)
     private Cliente cliente;
 
-    @Column(nullable = false)
-    private LocalDateTime dataHorarioInicio;
+    // 🔗 HORARIO associado (janela de tempo)
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "horario_id", nullable = false)
+    private Horario horario;
 
-    @Column(nullable = false)
-    private LocalDateTime dataHorarioFim;
+    // 🔗 VAGA específica reservada
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "vaga_id", nullable = false)
+    private Vaga vaga;
 
-    @Column(nullable = false)
-    private String status;
+    @Column(name = "data_criacao", nullable = false)
+    private LocalDateTime dataCriacao;
 
-    @Column(nullable = false)
-    private String vaga;
+    @Column(nullable = false, length = 20)
+    private String status; // PENDENTE, CONFIRMADA, CANCELADA, EXPIRADA
 
+    @Column(name = "valor_previsto", precision = 10, scale = 2)
+    private BigDecimal valorPrevisto;
 }

@@ -1,14 +1,11 @@
 package projeto_integrador.estacionamento.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
-@Data
 @Table(name = "funcionario")
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -16,17 +13,22 @@ public class Funcionario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "id_funcionario")
+    private Long idFuncionario;
 
     @Column(nullable = false)
     private String nome;
 
-    @Column(nullable = false, unique = true)
-    private String login;
-
-    @Column(nullable = false)
-    private String senha;
+    @Column(nullable = false, unique = true, length = 14)
+    private String cpf;
 
     @Column(nullable = false)
     private String cargo;
+
+    @Column(nullable = false)
+    private Boolean ativo = true;
+
+    //Relacionamento 1:1 com USUARIO (login/senha)
+    @OneToOne(mappedBy = "funcionario", cascade = CascadeType.ALL)
+    private Usuario usuario;
 }
