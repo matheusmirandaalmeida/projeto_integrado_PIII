@@ -11,7 +11,7 @@ public class Ticket {
     //colunas do banco de dados
     private Long idTicket;
     private LocalDateTime entrada;
-    private  LocalDateTime saida;
+    private LocalDateTime saida;
     private Double valor;
     private String formaPagamento;
     private String statusPagamento;
