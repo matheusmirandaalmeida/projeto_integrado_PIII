@@ -9,7 +9,7 @@ public class Veiculo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idVeiculo;
     private String modelo;
     private int ano;
     private String placa;

@@ -9,7 +9,7 @@ public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     //colunas do banco de dados
-    private Long id;
+    private Long idTicket;
     private LocalDateTime entrada;
     private  LocalDateTime saida;
     private Double valor;

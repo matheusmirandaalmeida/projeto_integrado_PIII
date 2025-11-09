@@ -2,6 +2,8 @@ package projeto_integrador.estacionamento.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import projeto_integrador.estacionamento.enuns.ReservaStatus;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 

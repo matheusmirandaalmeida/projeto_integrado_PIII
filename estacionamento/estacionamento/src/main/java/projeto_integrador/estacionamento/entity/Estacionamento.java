@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 
+@Entity
 public class Estacionamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

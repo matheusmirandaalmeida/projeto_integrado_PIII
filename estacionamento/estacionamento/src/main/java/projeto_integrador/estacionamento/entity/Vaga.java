@@ -9,7 +9,7 @@ public class Vaga {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idVaga;
     private String numero;
     private String categoria;
     private String status;
