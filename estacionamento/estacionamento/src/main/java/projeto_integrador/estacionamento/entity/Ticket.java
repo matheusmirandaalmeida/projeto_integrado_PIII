@@ -18,7 +18,6 @@ public class Ticket {
     private String statusTicket;
     private Double desconto;
 
-    //aq cria coluna de vaga e de veiculo
     @ManyToOne
     @JoinColumn(name = "vaga_id")
     private Vaga vaga;
