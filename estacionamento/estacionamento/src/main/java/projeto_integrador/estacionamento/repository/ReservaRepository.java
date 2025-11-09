@@ -17,7 +17,7 @@ public interface ReservaRepository extends JpaRepository<Reserva, Long> {
     @Query("""
        select (count(r) > 0)
        from Reserva r
-       where r.vaga.id = :vagaId
+       where r.vaga.idVaga = :vagaId
          and r.status in :statusAtivos
          and r.horario.inicio <= :fim
          and r.horario.fim >= :inicio
