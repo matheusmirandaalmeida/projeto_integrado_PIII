@@ -52,6 +52,7 @@ public class ClienteService {
 
         // 2.2. Simula o salvamento e adiciona à lista
         CLIENTES_CADASTRADOS.add(novoCliente);
+        System.out.println("teste para pull");
 
         System.out.println("--- REGISTRO SIMULADO COM SUCESSO ---");
         System.out.println("ID: " + novoCliente.getIdCliente() + " | Cliente: " + novoCliente.getNome());
