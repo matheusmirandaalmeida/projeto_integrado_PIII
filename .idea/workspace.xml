@@ -69,6 +69,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/teumm/OneDrive/Documentos/GitHub/projeto_integrado_PIII/projeto_integrado_PIII-main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -145,6 +146,7 @@
       <workItem from="1763427673053" duration="32000" />
       <workItem from="1763427740579" duration="99000" />
       <workItem from="1763428223610" duration="746000" />
+      <workItem from="1763429257477" duration="349000" />
     </task>
     <task id="LOCAL-00001" summary="Gerando classes Cliente, Reserva e Funcionario.">
       <option name="closed" value="true" />
