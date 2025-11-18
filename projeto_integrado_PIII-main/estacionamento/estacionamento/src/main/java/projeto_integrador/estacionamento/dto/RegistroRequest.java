@@ -13,7 +13,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class RegistroRequest {
 
-    @NotBlank(message = "O nome é obrigatório.")
+    @NotBlank(message = "O nome é obrigatório")
     @Size(min = 3, message = "O nome deve ter pelo menos 3 caracteres.")
     private String nome;
 
