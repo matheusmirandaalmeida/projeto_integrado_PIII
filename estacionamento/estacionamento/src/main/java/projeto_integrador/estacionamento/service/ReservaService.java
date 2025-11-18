@@ -19,7 +19,6 @@ import projeto_integrador.estacionamento.repository.HorarioRepository;
 
 import java.util.List;
 
-@Service
 @RequiredArgsConstructor
 public class ReservaService {
 
