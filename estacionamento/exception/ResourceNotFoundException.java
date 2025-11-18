@@ -1,0 +1,7 @@
+package projeto_integrador.estacionamento.exception;
+
+public class ResourceNotFoundException extends RuntimeException {
+    public ResourceNotFoundException(String message) {
+        super(message);
+    }
+}
