@@ -56,7 +56,7 @@ public class ClienteService {
         System.out.println("--- REGISTRO SIMULADO COM SUCESSO ---");
         System.out.println("ID: " + novoCliente.getIdCliente() + " | Cliente: " + novoCliente.getNome());
         System.out.println("-------------------------------------");
-
+        System.out.println("teste");
         return novoCliente;
     }
 
